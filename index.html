@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Card Advisor">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Card Advisor</title>
+<style>
+:root {
+  --bg: #000000; --surface: #151515; --surface-hi: #222222; --line: #2b2b2b;
+  --text: #f2ede4; --muted: #8e8a84; --faint: #4a4744;
+  --player: #4a90e2; --banker: #e5484d; --tie: #3dbb78; --win: #3dbb78; --loss: #e5484d;
+  --hit: #f5a524; --stand: #3dbb78; --double: #4a90e2; --split: #b57edc; --surrender: #8e8a84;
+  color-scheme: dark;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+/* The brief asks for a black app in every theme, so light and dark share tokens. */
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #000000; --text: #f2ede4; } }
+:root[data-theme="dark"] { --bg: #000000; --text: #f2ede4; }
+*, *::before, *::after { box-sizing: inherit; -webkit-tap-highlight-color: transparent; }
+html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0; height: 100%; background: var(--bg); color: var(--text);
+  font: 15px/1.35 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums; -webkit-user-select: none; user-select: none;
+}
+.app { max-width: 480px; margin: 0 auto; padding: 8px 14px 28px; }
+header { display: flex; align-items: center; gap: 8px; padding: 6px 0 10px; }
+header h1 { font-size: 17px; margin: 0; font-weight: 650; }
+.pill { color: var(--muted); font-size: 12px; }
+.spacer { flex: 1; }
+button {
+  font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 6px; min-height: 44px; cursor: pointer; touch-action: manipulation;
+}
+button:active { background: var(--line); }
+button:disabled { color: var(--faint); border-color: var(--surface); }
+button.on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 650; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--muted); outline-offset: 1px; }
+.icon-btn { background: none; border: none; color: var(--muted); font-size: 20px; min-width: 44px; }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px; }
+.tabs { position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); padding: 4px 0 10px; z-index: 5; }
+.view { display: none; } .view.show { display: block; }
+.stack > * + * { margin-top: 12px; }
+.muted { color: var(--muted); } .small { font-size: 12.5px; }
+.row { display: flex; align-items: center; gap: 8px; }
+.stats3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.cell .lab { color: var(--muted); font-size: 12px; } .cell .val { font-size: 17px; font-weight: 650; }
+.action { font-size: 46px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.05; }
+.flags { color: var(--split); font-size: 13px; min-height: 1em; }
+.hands { display: grid; grid-template-columns: 56px 1fr auto; gap: 8px 10px; align-items: center; }
+.cards { display: flex; gap: 5px; flex-wrap: wrap; min-height: 42px; align-items: center; }
+.card {
+  width: 30px; height: 40px; border-radius: 4px; background: var(--text); color: #141414;
+  display: grid; place-items: center; font-weight: 800; font-size: 14px;
+}
+.card.ghost { background: none; border: 1px dashed var(--faint); }
+.card.ghost.active { border-color: var(--muted); }
+.keypad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.keypad button { font-size: 20px; font-weight: 700; min-height: 54px; }
+.tools { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.tools button { font-size: 14px; }
+.betcard { border-top: 1px solid var(--line); padding-top: 12px; }
+.betcard .amt { font-size: 19px; font-weight: 700; }
+.betcard .amt.alert { color: var(--hit); }
+input[type=text], input[type=number] {
+  font: inherit; font-size: 17px; color: var(--text); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 12px; width: 100%; min-height: 44px; -webkit-user-select: text; user-select: text;
+}
+.toggle { display: flex; align-items: center; gap: 8px; color: var(--text); font-size: 15px; white-space: nowrap; }
+.toggle input { width: 22px; height: 22px; accent-color: var(--text); }
+.results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.results.five { grid-template-columns: repeat(5, 1fr); }
+.c-win { color: var(--win); } .c-loss { color: var(--loss); } .c-player { color: var(--player); }
+.c-banker { color: var(--banker); } .c-tie { color: var(--tie); }
+.bar { margin-top: 4px; }
+.bar .top { display: flex; justify-content: space-between; align-items: baseline; }
+.bar .name { font-weight: 600; } .bar .ev { color: var(--muted); font-size: 12px; margin-left: 6px; }
+.bar .ev.pos { color: var(--win); }
+.bar .pct { font-weight: 700; }
+.track { height: 7px; border-radius: 4px; background: var(--surface-hi); margin-top: 5px; overflow: hidden; }
+.fill { height: 100%; border-radius: 4px; }
+.verdict { font-size: 14px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 10px; }
+.big { font-size: 34px; font-weight: 800; }
+svg.chart { width: 100%; height: 130px; display: block; }
+.coach h3 { font-size: 15px; margin: 18px 0 6px; }
+.coach p { margin: 4px 0; }
+.habit { color: var(--hit); }
+.err { color: var(--loss); }
+.sheet-wrap { position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none; z-index: 20; overflow-y: auto; }
+.sheet-wrap.show { display: block; }
+.sheet {
+  max-width: 480px; margin: 0 auto; background: var(--bg); border: 1px solid var(--line); border-radius: 0 0 16px 16px;
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) 16px 18px;
+}
+.sheet h2 { font-size: 20px; margin: 4px 0 12px; }
+.form { display: grid; grid-template-columns: auto 1fr; gap: 8px 10px; align-items: center; }
+.form label { color: var(--muted); font-size: 14px; }
+.choice { display: block; width: 100%; text-align: left; padding: 12px; margin-top: 8px; }
+.choice .t { font-weight: 650; } .choice .d { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.choice.on .d { color: #444; }
+footer {
+  position: sticky; bottom: 0; background: var(--bg); border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; align-items: center; padding: 8px 0 calc(env(safe-area-inset-bottom, 0px) + 6px);
+  margin-top: 14px;
+}
+footer .profit { font-weight: 700; }
+footer button { min-height: 36px; padding: 6px 10px; font-size: 13px; color: var(--muted); background: none; border: none; }
+.sync { font-size: 11px; color: var(--faint); text-align: center; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Card Advisor</h1><span class="pill" id="modePill"></span>
+    <span class="spacer"></span>
+    <button class="icon-btn" id="gear" aria-label="Table settings">⚙</button>
+  </header>
+  <div class="tabs seg" id="tabs">
+    <button data-tab="bj" class="on">Blackjack</button><button data-tab="bac">Baccarat</button>
+    <button data-tab="stats">Stats</button><button data-tab="coach">Coach</button>
+  </div>
+
+  <!-- ============ BLACKJACK ============ -->
+  <section class="view show stack" id="v-bj">
+    <div class="stats3" id="bjCount">
+      <div class="cell"><div class="lab">Running count</div><div class="val" id="rc"></div></div>
+      <div class="cell"><div class="lab">True count</div><div class="val" id="tc"></div></div>
+      <div class="cell"><div class="lab">Shoe dealt</div><div class="val" id="pen"></div></div>
+    </div>
+    <p class="muted small" id="bjRng">RNG mode: every hand is a fresh deck, so there's nothing to count. Advice is basic strategy.</p>
+    <div>
+      <div class="action" id="action"></div>
+      <div class="muted small" id="reason"></div>
+      <div class="flags" id="flags"></div>
+    </div>
+    <div class="hands">
+      <span class="muted">Dealer</span><div class="cards" id="dealerCards"></div><span id="dealerTot"></span>
+      <span class="muted" id="youLab">You</span><div class="cards" id="playerCards"></div><span id="playerTot"></span>
+    </div>
+    <div class="seg" id="target">
+      <button data-t="player">You</button><button data-t="dealer">Dealer</button><button data-t="seen">Other player</button>
+    </div>
+    <div class="keypad" id="bjKeys"></div>
+    <div class="tools">
+      <button id="bjUndo">Undo</button><button id="bjSplit">Split</button>
+      <button id="bjNext">New hand</button><button id="bjShuffle">Shuffle</button>
+    </div>
+    <div class="betcard" id="bjBetCard"></div>
+    <div class="row">
+      <input type="text" inputmode="decimal" id="bjBet" aria-label="Bet amount">
+      <label class="toggle"><input type="checkbox" id="bjDoubled"> Doubled</label>
+    </div>
+    <div class="results" id="bjResults"></div>
+  </section>
+
+  <!-- ============ BACCARAT ============ -->
+  <section class="view stack" id="v-bac">
+    <div class="stats3" id="bacShoe">
+      <div class="cell"><div class="lab">Cards left</div><div class="val" id="bacLeft"></div></div>
+      <div class="cell"><div class="lab">Shoe dealt</div><div class="val" id="bacPen"></div></div>
+      <div class="cell"><div class="lab">This coup</div><div class="val" id="bacCoup"></div></div>
+    </div>
+    <p class="muted small" id="bacRng">RNG mode: each coup is a fresh deck, so these odds never change and past results don't matter. Just tap the winner.</p>
+    <div id="bars"></div>
+    <div class="verdict" id="bacVerdict"></div>
+    <div id="bacEntry" class="stack">
+      <div class="seg" id="bacSide"><button data-s="player">Player card</button><button data-s="banker">Banker card</button></div>
+      <div class="keypad" id="bacKeys"></div>
+      <div class="tools" style="grid-template-columns:1fr 1fr"><button id="bacUndo">Undo card</button><button id="bacShuffle">Shuffle</button></div>
+    </div>
+    <div class="betcard" id="bacBetCard"></div>
+    <input type="text" inputmode="decimal" id="bacBet" aria-label="Bet amount">
+    <div class="seg" id="bacBetSide"><button data-s="player">On player</button><button data-s="banker">On banker</button><button data-s="tie">On tie</button></div>
+    <div class="muted small">Winner:</div>
+    <div class="seg"><button class="c-player" data-w="player">Player</button><button class="c-banker" data-w="banker">Banker</button><button class="c-tie" data-w="tie">Tie</button></div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="view stack" id="v-stats">
+    <div><div class="muted small">Profit</div><div class="big" id="sProfit"></div></div>
+    <svg class="chart" id="chart" viewBox="0 0 300 130" preserveAspectRatio="none" role="img" aria-label="Profit over rounds"></svg>
+    <div class="grid2" id="sGrid"></div>
+    <div class="seg"><button id="sUndo">Undo last round</button><button id="sReset">Reset session</button></div>
+  </section>
+
+  <!-- ============ COACH ============ -->
+  <section class="view coach" id="v-coach"></section>
+
+  <footer>
+    <span class="profit" id="fProfit"></span>
+    <button id="bankBtn"></button>
+  </footer>
+  <div class="sync" id="sync"></div>
+</div>
+
+<!-- ============ SHEETS ============ -->
+<div class="sheet-wrap" id="planSheet"><div class="sheet">
+  <h2>Your bankroll</h2>
+  <button class="choice" id="planContinue" style="display:none"></button>
+  <p class="muted small" id="planOr" style="display:none">Or start a new plan:</p>
+  <div class="form">
+    <label for="pBank">Bankroll $</label><input type="text" inputmode="decimal" id="pBank">
+    <label for="pBase">Base bet $</label><input type="text" inputmode="decimal" id="pBase">
+    <label for="pGoal">Goal $</label><input type="text" inputmode="decimal" id="pGoal">
+    <label for="pStop">Stop at $</label><input type="text" inputmode="decimal" id="pStop">
+    <label for="pMin">Table min $</label><input type="text" inputmode="decimal" id="pMin">
+    <label for="pMax">Table max $</label><input type="text" inputmode="decimal" id="pMax">
+  </div>
+  <p class="muted small">Goal and stop are bankroll amounts (stop at $0 means play until it's gone). Table max 0 means no limit.</p>
+  <button class="choice" data-profile="steady"><div class="t">Steady</div><div class="d">Base bets when there's no edge, so sessions last. Bets up (half Kelly) when live blackjack gives you an edge.</div></button>
+  <button class="choice" data-profile="aggressive"><div class="t">Aggressive</div><div class="d">Bold play: bets sized so one win reaches your goal. The best chance of hitting a big goal, with a matching chance of busting. Full Kelly when you have an edge.</div></button>
+  <p class="muted small" id="planOdds"></p>
+  <label class="toggle"><input type="checkbox" id="pAuto"> Fill in the suggested bet for me</label>
+  <div style="margin-top:14px"><button id="planStart" style="width:100%" class="on">Start session</button></div>
+</div></div>
+
+<div class="sheet-wrap" id="setSheet"><div class="sheet">
+  <h2>Table settings</h2>
+  <button class="choice" data-live="1"><div class="t">Live dealer tables</div><div class="d">Real shoe: every card counts, so the count and odds update as the shoe is dealt.</div></button>
+  <button class="choice" data-live="0"><div class="t">Originals / RNG games</div><div class="d">Each hand is dealt from a fresh deck. Basic strategy and fixed odds.</div></button>
+  <div class="form" style="margin-top:12px">
+    <label for="sDecks">Shoe size</label><input type="number" min="1" max="8" id="sDecks">
+    <label for="sTie">Tie pays</label><input type="number" min="1" max="20" id="sTie">
+    <label for="sComm">Banker comm. %</label><input type="text" inputmode="decimal" id="sComm">
+  </div>
+  <div class="stack" style="margin-top:12px">
+    <label class="toggle"><input type="checkbox" id="sH17"> Dealer hits soft 17</label>
+    <label class="toggle"><input type="checkbox" id="sDas"> Double after split allowed</label>
+    <label class="toggle"><input type="checkbox" id="sSur"> Late surrender offered</label>
+    <label class="toggle"><input type="checkbox" id="sNoComm"> No commission baccarat (Banker 6 pays half)</label>
+  </div>
+  <p class="muted small" id="setNote"></p>
+  <div class="seg" style="margin-top:12px"><button id="setCancel">Cancel</button><button id="setSave" class="on">Save</button></div>
+</div></div>
+
+<script>
+// ===== Card Advisor core: ported from the tested Python engines =====
+const RANKS = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"];
+const bjValue = r => r === "A" ? 11 : (["10","J","Q","K"].includes(r) ? 10 : +r);
+const baccValue = r => r === "A" ? 1 : (["10","J","Q","K"].includes(r) ? 0 : +r);
+const hilo = r => { const v = bjValue(r); return v <= 6 ? 1 : v <= 9 ? 0 : -1; };
+
+// ---------------------------------------------------------------- shoe
+class Shoe {
+  constructor(decks = 8, infinite = false) { this.decks = decks; this.infinite = infinite; this.shuffle(); }
+  shuffle() { this.remaining = {}; RANKS.forEach(r => this.remaining[r] = 4 * this.decks); this.history = []; this.rc = 0; }
+  get left() { return Object.values(this.remaining).reduce((a, b) => a + b, 0); }
+  get seen() { return this.history.length; }
+  deal(r) {
+    if (!this.infinite) {
+      if (this.remaining[r] === 0) throw new Error(`No ${r}s left in a ${this.decks}-deck shoe. Misread, or time to shuffle?`);
+      this.remaining[r]--; this.rc += hilo(r);
+    }
+    this.history.push(r); return r;
+  }
+  undo() {
+    const r = this.history.pop(); if (r === undefined) return null;
+    if (!this.infinite) { this.remaining[r]++; this.rc -= hilo(r); }
+    return r;
+  }
+  get tc() { return this.infinite ? 0 : this.rc / Math.max(this.left / 52, 0.25); }
+  get pen() { return this.infinite ? 0 : this.seen / (52 * this.decks); }
+  baccCounts() { const c = Array(10).fill(0); for (const r of RANKS) c[baccValue(r)] += this.remaining[r]; return c; }
+}
+
+// ------------------------------------------------------------ blackjack
+function handTotal(cards) {
+  let t = 0, aces = 0;
+  for (const c of cards) { const v = bjValue(c); t += v; if (v === 11) aces++; }
+  while (t > 21 && aces) { t -= 10; aces--; }
+  return [t, aces > 0];
+}
+function hardCode(t, up, r) {
+  if (t >= 17) return (t === 17 && up === 11 && r.h17) ? "Rs" : "S";
+  if (t === 16 && [9, 10, 11].includes(up)) return "Rh";
+  if (t === 15 && (up === 10 || (up === 11 && r.h17))) return "Rh";
+  if (t >= 13) return up <= 6 ? "S" : "H";
+  if (t === 12) return (up >= 4 && up <= 6) ? "S" : "H";
+  if (t === 11) return (up <= 10 || r.h17) ? "D" : "H";
+  if (t === 10) return up <= 9 ? "D" : "H";
+  if (t === 9) return (up >= 3 && up <= 6) ? "D" : "H";
+  return "H";
+}
+function softCode(t, up, r) {
+  if (t >= 20) return "S";
+  if (t === 19) return (up === 6 && r.h17) ? "Ds" : "S";
+  if (t === 18) { const lo = r.h17 ? 2 : 3; if (up >= lo && up <= 6) return "Ds"; return [2, 7, 8].includes(up) ? "S" : "H"; }
+  if (t === 17) return (up >= 3 && up <= 6) ? "D" : "H";
+  if (t === 15 || t === 16) return (up >= 4 && up <= 6) ? "D" : "H";
+  if (t === 13 || t === 14) return (up >= 5 && up <= 6) ? "D" : "H";
+  return "H";
+}
+function pairCode(v, up, r) {
+  const das = r.das;
+  if (v === 11) return "P";
+  if (v === 10 || v === 5) return null;
+  if (v === 9) return [2, 3, 4, 5, 6, 8, 9].includes(up) ? "P" : null;
+  if (v === 8) return (up === 11 && r.h17) ? "Rp" : "P";
+  if (v === 7) return up <= 7 ? "P" : null;
+  if (v === 6) return (up >= (das ? 2 : 3) && up <= 6) ? "P" : null;
+  if (v === 4) return (das && (up === 5 || up === 6)) ? "P" : null;
+  if (v === 2 || v === 3) return (up >= (das ? 2 : 4) && up <= 7) ? "P" : null;
+  return null;
+}
+function deviation(t, soft, pv, up, tc, two) {
+  if (pv === 10 && two) {
+    if (up === 5 && tc >= 5) return ["P", "True count ≥ +5: split 10s vs 5"];
+    if (up === 6 && tc >= 4) return ["P", "True count ≥ +4: split 10s vs 6"];
+  }
+  if (soft) return null;
+  if (t === 16 && up === 10 && tc >= 0) return ["S", "True count ≥ 0: stand 16 vs 10"];
+  if (t === 16 && up === 9 && tc >= 5) return ["S", "True count ≥ +5: stand 16 vs 9"];
+  if (t === 15 && up === 10 && tc >= 4) return ["S", "True count ≥ +4: stand 15 vs 10"];
+  if (t === 13 && up === 2 && tc <= -1) return ["H", "True count ≤ -1: hit 13 vs 2"];
+  if (t === 13 && up === 3 && tc <= -2) return ["H", "True count ≤ -2: hit 13 vs 3"];
+  if (t === 12) {
+    if (up === 2 && tc >= 3) return ["S", "True count ≥ +3: stand 12 vs 2"];
+    if (up === 3 && tc >= 2) return ["S", "True count ≥ +2: stand 12 vs 3"];
+    if (up === 4 && tc < 0) return ["H", "True count < 0: hit 12 vs 4"];
+    if (up === 5 && tc <= -2) return ["H", "True count ≤ -2: hit 12 vs 5"];
+    if (up === 6 && tc <= -1) return ["H", "True count ≤ -1: hit 12 vs 6"];
+  }
+  if (two) {
+    if (t === 11 && up === 11 && tc >= 1) return ["D", "True count ≥ +1: double 11 vs A"];
+    if (t === 10 && up === 10 && tc >= 4) return ["D", "True count ≥ +4: double 10 vs 10"];
+    if (t === 10 && up === 11 && tc >= 4) return ["D", "True count ≥ +4: double 10 vs A"];
+    if (t === 9 && up === 2 && tc >= 1) return ["D", "True count ≥ +1: double 9 vs 2"];
+    if (t === 9 && up === 7 && tc >= 3) return ["D", "True count ≥ +3: double 9 vs 7"];
+  }
+  return null;
+}
+function resolveCode(c, canD, canP, canR) {
+  switch (c) {
+    case "H": return "Hit"; case "S": return "Stand";
+    case "D": return canD ? "Double" : "Hit"; case "Ds": return canD ? "Double" : "Stand";
+    case "P": return canP ? "Split" : "Hit";
+    case "Rh": return canR ? "Surrender" : "Hit"; case "Rs": return canR ? "Surrender" : "Stand";
+    case "Rp": return canR ? "Surrender" : "Split";
+  }
+}
+// rules: {h17, das, surrender}; tc = null in RNG mode
+function advise(cards, upRank, rules, tc = null, canSplit = true) {
+  const up = bjValue(upRank);
+  const [t, soft] = handTotal(cards);
+  const two = cards.length === 2;
+  const pv = two && bjValue(cards[0]) === bjValue(cards[1]) ? bjValue(cards[0]) : null;
+  const canD = two, canR = two && rules.surrender, canP = pv !== null && canSplit;
+  const insurance = up === 11 && tc !== null && tc >= 3;
+  if (t > 21) return { action: "Bust", reason: "Your hand is over 21." };
+  if (two && t === 21) return { action: "Stand", reason: "Blackjack!" };
+  const basicSplit = canP ? pairCode(pv, up, rules) : null;
+  if (tc !== null && !basicSplit) {
+    const d = deviation(t, soft, pv, up, tc, two);
+    if (d) return { action: resolveCode(d[0], canD, canP, canR), reason: d[1], deviation: true, insurance };
+  }
+  if (basicSplit) return { action: resolveCode(basicSplit, canD, true, canR), reason: `Basic strategy: pair of ${cards[0]}s vs ${upRank}`, insurance };
+  const code = soft ? softCode(t, up, rules) : hardCode(t, up, rules);
+  return { action: resolveCode(code, canD, false, canR), reason: `Basic strategy: ${soft ? "soft" : "hard"} ${t} vs ${upRank}`, insurance };
+}
+const estEdge = tc => -0.005 + 0.005 * tc;
+
+// ------------------------------------------------- exact baccarat odds
+function bankerDraws(bt, p3) {
+  if (p3 === null) return bt <= 5;
+  if (bt <= 2) return true;
+  if (bt === 3) return p3 !== 8;
+  if (bt === 4) return p3 >= 2 && p3 <= 7;
+  if (bt === 5) return p3 >= 4 && p3 <= 7;
+  if (bt === 6) return p3 === 6 || p3 === 7;
+  return false;
+}
+const _bacCache = new Map();
+function baccProbs(counts, infinite) {
+  const key = counts.join(",") + (infinite ? "i" : "");
+  if (_bacCache.has(key)) return _bacCache.get(key);
+  const c = counts.slice(); const N0 = c.reduce((a, b) => a + b, 0);
+  if (N0 < 6) throw new Error("Not enough cards left for a coup. Shuffle.");
+  let n = N0; const out = [0, 0, 0, 0]; // player, banker, tie, banker-wins-on-6
+  const take = v => { if (c[v] === 0) return 0; if (infinite) return c[v] / N0; const p = c[v] / n; c[v]--; n--; return p; };
+  const give = v => { if (!infinite) { c[v]++; n++; } };
+  const settle = (pt, bt, w) => { if (pt > bt) out[0] += w; else if (bt > pt) { out[1] += w; if (bt === 6) out[3] += w; } else out[2] += w; };
+  const resolve = (pt, bt, w) => {
+    if (pt >= 8 || bt >= 8) return settle(pt, bt, w);
+    if (pt <= 5) {
+      for (let v = 0; v < 10; v++) {
+        const q = take(v); if (!q) continue;
+        const pt3 = (pt + v) % 10;
+        if (bankerDraws(bt, v)) {
+          for (let u = 0; u < 10; u++) { const r = take(u); if (!r) continue; settle(pt3, (bt + u) % 10, w * q * r); give(u); }
+        } else settle(pt3, bt, w * q);
+        give(v);
+      }
+    } else if (bankerDraws(bt, null)) {
+      for (let u = 0; u < 10; u++) { const r = take(u); if (!r) continue; settle(pt, (bt + u) % 10, w * r); give(u); }
+    } else settle(pt, bt, w);
+  };
+  for (let a = 0; a < 10; a++) { const pa = take(a); if (!pa) continue;
+    for (let b = a; b < 10; b++) { const pb = take(b); if (!pb) continue;
+      const wp = pa * pb * (a === b ? 1 : 2);
+      for (let x = 0; x < 10; x++) { const px = take(x); if (!px) continue;
+        for (let y = x; y < 10; y++) { const py = take(y); if (!py) continue;
+          resolve((a + b) % 10, (x + y) % 10, wp * px * py * (x === y ? 1 : 2)); give(y); }
+        give(x); }
+      give(b); }
+    give(a); }
+  _bacCache.set(key, out); if (_bacCache.size > 400) _bacCache.clear();
+  return out;
+}
+function baccOdds(shoe, s) {
+  const [p, b, t, b6] = baccProbs(shoe.baccCounts(), shoe.infinite);
+  const evB = s.noComm ? (b - b6) + 0.5 * b6 - p : b * (1 - s.commission) - p;
+  const o = { player: p, banker: b, tie: t, evPlayer: p - b, evBanker: evB, evTie: t * s.tiePays - (p + b) };
+  const evs = { Banker: o.evBanker, Player: o.evPlayer, Tie: o.evTie };
+  o.best = Object.keys(evs).reduce((x, y) => evs[y] > evs[x] ? y : x);
+  o.bestEv = evs[o.best];
+  return o;
+}
+function baccSuggestion(o) {
+  if (o.bestEv > 0) return `${o.best} has a real edge right now (${pct(o.bestEv, true)}).`;
+  const other = o.best === "Player" ? o.evBanker : o.evPlayer;
+  return `${o.best} loses the least (${pct(o.bestEv, true)} per $1, vs ${pct(other, true)} on the other side). History doesn't change this.`;
+}
+
+// ------------------------------------------- EV of blackjack decisions
+const EVP = { 1: 1 / 13, 2: 1 / 13, 3: 1 / 13, 4: 1 / 13, 5: 1 / 13, 6: 1 / 13, 7: 1 / 13, 8: 1 / 13, 9: 1 / 13, 10: 4 / 13 };
+const OUTS = [17, 18, 19, 20, 21, 22];
+function addCard(t, soft, c) { t += c; if (c === 1 && t + 10 <= 21) { t += 10; soft = true; } if (t > 21 && soft) { t -= 10; soft = false; } return [t, soft]; }
+const _dm = new Map();
+function dealerFrom(t, soft, h17) {
+  const k = `${t},${soft},${h17}`; if (_dm.has(k)) return _dm.get(k);
+  let r;
+  if (t > 21) r = OUTS.map(o => o === 22 ? 1 : 0);
+  else if (t >= 17 && !(h17 && soft && t === 17)) r = OUTS.map(o => o === t ? 1 : 0);
+  else { r = [0, 0, 0, 0, 0, 0]; for (const c in EVP) { const sub = dealerFrom(...addCard(t, soft, +c), h17); sub.forEach((q, i) => r[i] += EVP[c] * q); } }
+  _dm.set(k, r); return r;
+}
+const _dd = new Map();
+function dealerDist(up, h17) {
+  const k = `${up},${h17}`; if (_dd.has(k)) return _dd.get(k);
+  const start = up === 1 ? [11, true] : [up, false]; const acc = [0, 0, 0, 0, 0, 0]; let norm = 0;
+  for (const c in EVP) { const cv = +c; if ((up === 1 && cv === 10) || (up === 10 && cv === 1)) continue;
+    norm += EVP[c]; dealerFrom(...addCard(...start, cv), h17).forEach((q, i) => acc[i] += EVP[c] * q); }
+  const r = acc.map(a => a / norm); _dd.set(k, r); return r;
+}
+function standEv(t, up, h17) { if (t > 21) return -1; let ev = 0; dealerDist(up, h17).forEach((q, i) => { const o = OUTS[i]; if (o === 22 || t > o) ev += q; else if (t < o) ev -= q; }); return ev; }
+const _hm = new Map();
+function hitEv(t, soft, up, h17) {
+  const k = `${t},${soft},${up},${h17}`; if (_hm.has(k)) return _hm.get(k);
+  let ev = 0; for (const c in EVP) { const [nt, ns] = addCard(t, soft, +c); ev += EVP[c] * (nt > 21 ? -1 : Math.max(standEv(nt, up, h17), hitEv(nt, ns, up, h17))); }
+  _hm.set(k, ev); return ev;
+}
+function actionEv(t, soft, up, a, h17) {
+  up = up === 11 ? 1 : up;
+  if (a === "Stand") return standEv(t, up, h17);
+  if (a === "Hit") return hitEv(t, soft, up, h17);
+  if (a === "Double") { let ev = 0; for (const c in EVP) ev += EVP[c] * standEv(addCard(t, soft, +c)[0], up, h17); return 2 * ev; }
+  if (a === "Surrender") return -0.5;
+  return null;
+}
+function decisionCost(t, soft, up, advised, chosen, h17) {
+  const ok = ["Hit", "Stand", "Double", "Surrender"];
+  if (advised === chosen || !ok.includes(advised) || !ok.includes(chosen)) return 0;
+  return Math.max(0, actionEv(t, soft, up, advised, h17) - actionEv(t, soft, up, chosen, h17));
+}
+
+// ------------------------------------------------------- settling
+function bjResult(player, dealer, doubled) {
+  if (player.length < 2) return null;
+  const m = doubled ? 2 : 1; const [pt] = handTotal(player); const pbj = player.length === 2 && pt === 21;
+  if (pt > 21) return ["loss", m];
+  if (!dealer.length) return null;
+  const [dt] = handTotal(dealer); const dbj = dealer.length === 2 && dt === 21;
+  if (pbj) { if (dealer.length < 2 && ["A", "10", "J", "Q", "K"].includes(dealer[0])) return null; return dbj ? ["push", 1] : ["blackjack", 1]; }
+  if (dbj) return ["loss", m];
+  if (dealer.length < 2 || (dt < 17)) return null;
+  if (dt > 21 || pt > dt) return ["win", m];
+  return pt < dt ? ["loss", m] : ["push", m];
+}
+const RESULT_MULT = { win: 1, loss: -1, push: 0, blackjack: 1.5, surrender: -0.5 };
+
+// ------------------------------------------------------- bankroll
+const VAR = { blackjack: 1.33, baccarat: 0.92 };
+function payoutOf(game, side) { return game === "baccarat" ? (side === "player" ? [0.4932, 1] : [0.5068, 0.95]) : [0.5, 1]; }
+function pReachFlat(br, goal, floor, bet, edge, game) {
+  if (br >= goal) return 1; if (br <= floor || bet <= 0) return 0;
+  const a = (br - floor) / bet, b = (goal - br) / bet;
+  if (Math.abs(edge) < 1e-9) return a / (a + b);
+  const k = 2 * edge / VAR[game];
+  const r = (1 - Math.exp(-k * a)) / (1 - Math.exp(-k * (a + b)));
+  return isFinite(r) ? Math.min(1, Math.max(0, r)) : (edge < 0 ? 0 : 1);
+}
+function rng(seed) { return () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }; }
+function pReachBold(br, goal, floor, game, side, cap, trials = 3000) {
+  const [p, pay] = payoutOf(game, side); const r = rng(7); let hits = 0;
+  for (let i = 0; i < trials; i++) { let b = br;
+    for (let j = 0; j < 400 && b < goal - 1e-9 && b > floor + 1e-9; j++) {
+      let bet = Math.min((goal - b) / pay, b - floor); if (cap) bet = Math.min(bet, cap(b));
+      b += r() < p ? bet * pay : -bet; }
+    if (b >= goal - 1e-9) hits++; }
+  return hits / trials;
+}
+function roundStep(x, step, up) { if (step <= 0) return Math.round(x * 100) / 100; const f = up ? Math.ceil : Math.floor; return Math.round(f(x / step + (up ? -1e-9 : 1e-9)) * step * 100) / 100; }
+function recommend(plan, br, edge, game, side) {
+  const base = plan.base;
+  if (br <= plan.stop + 1e-9) return { amount: 0, alert: `Stop reached: bankroll ${money(br)}.` };
+  if (br >= plan.goal - 1e-9) return { amount: 0, alert: `Goal reached: ${money(br)}. Cash out or set a new goal.` };
+  const room = br - plan.stop; const cap = game === "blackjack" ? (b => (b - plan.stop) / 2) : null;
+  let amount, reason; const aggr = plan.profile === "aggressive";
+  if (edge > 0) {
+    const kelly = edge / VAR[game] * (aggr ? 1 : 0.5) * br; amount = Math.max(base, kelly);
+    reason = kelly > base ? `You have an edge (${pct(edge, true)}). Bet up while it lasts (${aggr ? "full" : "half"} Kelly).`
+      : `Small edge (${pct(edge, true)}): not worth more than your base bet with this bankroll yet.`;
+  } else if (aggr) {
+    const [, pay] = payoutOf(game, side); amount = (plan.goal - br) / pay; if (cap) amount = Math.min(amount, cap(br));
+    reason = `Bold play: one win of this size gets you to ${money(plan.goal, 0)}. Fewest bets = best odds of hitting your goal.`;
+  } else { amount = base; reason = "No edge on this bet: your base bet makes the bankroll last longest."; }
+  const bold = aggr && edge <= 0;
+  amount = roundStep(amount, plan.min, bold); amount = Math.min(amount, room);
+  if (plan.max > 0) amount = Math.min(amount, plan.max);
+  amount = Math.max(amount, Math.min(plan.min, room));
+  const pg = bold ? pReachBold(br, plan.goal, plan.stop, game, side, cap) : pReachFlat(br, plan.goal, plan.stop, amount, edge, game);
+  return { amount, multiple: base ? Math.round(amount / base * 100) / 100 : 0, reason, pGoal: pg };
+}
+
+// ------------------------------------------------------- insights
+function situation(t, soft, pair, up) {
+  const u = up === 1 || up === 11 ? "A" : String(up);
+  if (pair) return `pair of ${pair === "A" ? "A" : bjValue(pair)}s vs ${u}`;
+  return `${soft ? "soft" : "hard"} ${t} vs ${u}`;
+}
+function habits(decisions, h17) {
+  const groups = new Map(); let followed = 0;
+  for (const d of decisions) {
+    if (d.chosen === d.advised) { followed++; continue; }
+    const k = `${d.situation}|${d.advised}|${d.chosen}`;
+    const g = groups.get(k) || { situation: d.situation, advised: d.advised, chosen: d.chosen, count: 0, cost: 0 };
+    g.count++; g.cost += decisionCost(d.total, d.soft, d.up, d.advised, d.chosen, h17) * (d.bet || 1); groups.set(k, g);
+  }
+  const top = [...groups.values()].sort((a, b) => b.cost - a.cost || b.count - a.count);
+  return { n: decisions.length, followed, rate: decisions.length ? followed / decisions.length : null, cost: top.reduce((s, g) => s + g.cost, 0), top: top.slice(0, 5) };
+}
+function soft17(bjRounds) {
+  let hits = 0, stands = 0;
+  for (const r of bjRounds) { const c = r.dealer || [];
+    for (let i = 2; i <= c.length; i++) { const [t, s] = handTotal(c.slice(0, i)); if (t === 17 && s) { i < c.length ? hits++ : stands++; break; } } }
+  return { hits, stands, verdict: hits + stands >= 3 ? (hits > stands ? "hits" : "stands") : null };
+}
+function fairness(bacRounds, bjRounds) {
+  const out = []; const n = bacRounds.length; const exp = { banker: 0.4586, player: 0.4462, tie: 0.0952 };
+  if (n >= 20) for (const side in exp) { const p = exp[side]; const k = bacRounds.filter(r => r.winner === side).length;
+    out.push({ what: `Baccarat: ${side} wins`, seen: k / n, expected: p, n, z: (k - n * p) / Math.sqrt(n * p * (1 - p)) }); }
+  let busts = 0, e = 0, m = 0;
+  for (const r of bjRounds) { const d = r.dealer || []; if (d.length < 2) continue; m++; const up = bjValue(d[0]);
+    e += dealerDist(up === 11 ? 1 : up, false)[5]; if (handTotal(d)[0] > 21) busts++; }
+  if (m >= 20) { const p = e / m; out.push({ what: "Blackjack: dealer busts", seen: busts / m, expected: p, n: m, z: (busts - e) / Math.sqrt(m * p * (1 - p)) }); }
+  out.forEach(o => o.verdict = Math.abs(o.z) < 2 ? "normal" : Math.abs(o.z) < 3 ? "a little unusual" : "unusual");
+  return out;
+}
+function backtest(bacRounds, best, noComm) {
+  const seq = bacRounds.map(r => r.winner); if (seq.length < 2) return [];
+  const pay = (side, w, b6) => w === "tie" ? 0 : side !== w ? -1 : side === "banker" ? (noComm ? (b6 ? 0.5 : 1) : 0.95) : 1;
+  const lastNT = i => { for (let j = i - 1; j >= 0; j--) if (seq[j] !== "tie") return seq[j]; return null; };
+  const streak = i => { const l = seq.slice(0, i).filter(s => s !== "tie").slice(-3); return l.length === 3 && new Set(l).size === 1 ? l[0] : null; };
+  const opp = { banker: "player", player: "banker" };
+  const sys = [[`Always ${best[0].toUpperCase() + best.slice(1)}`, () => best], ["Follow the last winner", lastNT],
+    ["Bet against the last winner", i => opp[lastNT(i)] || null], ["Follow 3-in-a-row streaks", streak]];
+  return sys.map(([name, pick]) => { let net = 0, bets = 0;
+    seq.forEach((w, i) => { const s = pick(i); if (!s) return; bets++; net += pay(s, w, bacRounds[i].banker6); });
+    return { name, bets, net, per100: bets ? 100 * net / bets : 0 }; });
+}
+function baccComplete(p, b) {
+  if (p.length < 2 || b.length < 2 || p.length > 3 || b.length > 3) return false;
+  const tot = h => h.reduce((s, c) => s + baccValue(c), 0) % 10;
+  const p2 = tot(p.slice(0, 2)), b2 = tot(b.slice(0, 2));
+  if (p2 >= 8 || b2 >= 8) return p.length === 2 && b.length === 2;
+  const pd = p2 <= 5; if (pd !== (p.length === 3)) return false;
+  if (!pd) return (b.length === 3) === (b2 <= 5);
+  return bankerDraws(b2, baccValue(p[2])) === (b.length === 3);
+}
+function baccWinner(p, b) {
+  const orders = h => h.length < 3 ? [h] : [0, 1, 2].map(i => [...h.filter((_, j) => j !== i), h[i]]);
+  if (!orders(p).some(pp => orders(b).some(bb => baccComplete(pp, bb)))) return null;
+  const tot = h => h.reduce((s, c) => s + baccValue(c), 0) % 10;
+  return tot(p) > tot(b) ? "player" : tot(b) > tot(p) ? "banker" : "tie";
+}
+
+// ------------------------------------------------------- formatting
+function money(x, d = 2) { const s = x < 0 ? "-" : ""; return `${s}$${Math.abs(x).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d })}`; }
+function pct(x, sign) { const v = (x * 100).toFixed(2) + "%"; return sign && x > 0 ? "+" + v : v; }
+
+if (typeof module !== "undefined") module.exports = { Shoe, handTotal, advise, baccOdds, actionEv, decisionCost, dealerDist,
+  recommend, pReachFlat, pReachBold, bjResult, habits, soft17, fairness, backtest, baccWinner, situation, estEdge };
+
+</script>
+<script>
+"use strict";
+// ======================================================= state
+const LS_KEY = "card-advisor-v1";
+const KEYS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+const defaults = () => ({
+  settings: { live: false, decks: 8, h17: false, das: true, surrender: false, commission: 0.05, tiePays: 8, noComm: false },
+  plan: { bankroll: 100, base: 1, goal: 200, stop: 0, min: 0.1, max: 0, profile: "steady", startProfit: 0 },
+  autofill: true, planSet: false,
+  session: [],                     // [game, bet, net, ts]
+  bj: { shoe: [], hands: [[]], active: 0, dealer: [], log: [], decisions: [], target: null },
+  bac: { shoe: [], hands: { player: [], banker: [] }, log: [], entrySide: "player", betSide: "banker" },
+  history: { decisions: [], bj: [], bac: [] },
+  bets: { bj: 1, bac: 1 }, typed: { bj: false, bac: false },
+  savedAt: 0,
+});
+let S = defaults();
+let bjShoe, bacShoe, bjError = "", bacError = "";
+
+function rebuildShoes() {
+  const mk = hist => { const sh = new Shoe(S.settings.decks, !S.settings.live); for (const r of hist) { try { sh.deal(r); } catch (e) {} } return sh; };
+  bjShoe = mk(S.bj.shoe); bacShoe = mk(S.bac.shoe);
+}
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; };
+const num = v => { const n = parseFloat(String(v).replace(/[$,]/g, "")); return isFinite(n) && n >= 0 ? n : 0; };
+const rules = () => ({ h17: S.settings.h17, das: S.settings.das, surrender: S.settings.surrender });
+const bacRules = () => ({ commission: S.settings.commission, tiePays: S.settings.tiePays, noComm: S.settings.noComm });
+const profit = () => S.session.reduce((s, r) => s + r[2], 0);
+const bankroll = () => Math.round((S.plan.bankroll + profit() - S.plan.startProfit) * 100) / 100;
+const tcOrNull = () => S.settings.live ? bjShoe.tc : null;
+
+// ======================================================= persistence
+let db = null, uid = null, saveTimer = null, dbReady = false;
+function save() {
+  S.savedAt = Date.now();
+  try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch (e) {}
+  if (!dbReady) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(pushDb, 1500);
+}
+function trimmed() {
+  const h = S.history;
+  h.decisions = h.decisions.slice(-1500); h.bj = h.bj.slice(-800); h.bac = h.bac.slice(-2000);
+  S.session = S.session.slice(-3000);
+}
+async function pushDb() {
+  if (!db || !uid) return;
+  trimmed();
+  const base = "data/users/" + uid + "/";
+  const { history, ...rest } = S;
+  try {
+    await db.doc(base + "state").set({ json: JSON.stringify(rest), savedAt: S.savedAt });
+    await db.doc(base + "decisions").set({ json: JSON.stringify(history.decisions) });
+    await db.doc(base + "rounds").set({ json: JSON.stringify({ bj: history.bj, bac: history.bac }) });
+    $("sync").textContent = "Saved to your account";
+  } catch (e) { $("sync").textContent = "Saved on this phone (account sync unavailable)"; }
+}
+function loadLocal() {
+  try { const raw = localStorage.getItem(LS_KEY); if (raw) S = Object.assign(defaults(), JSON.parse(raw)); } catch (e) {}
+}
+async function connectDb() {
+  try {
+    if (!window.claude || !window.claude.use) return;
+    const [d, u] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+    if (!d || !u) { $("sync").textContent = "Saved on this phone"; return; }
+    const id = await u.id(); if (!id) return;
+    db = d; uid = id;
+    const base = "data/users/" + uid + "/";
+    const st = await db.doc(base + "state").get();
+    if (st.exists && st.data().savedAt > S.savedAt) {
+      const rest = JSON.parse(st.data().json);
+      const dec = await db.doc(base + "decisions").get();
+      const rnd = await db.doc(base + "rounds").get();
+      const rounds = rnd.exists ? JSON.parse(rnd.data().json) : { bj: [], bac: [] };
+      S = Object.assign(defaults(), rest, { history: { decisions: dec.exists ? JSON.parse(dec.data().json) : [], bj: rounds.bj || [], bac: rounds.bac || [] } });
+      rebuildShoes();
+      try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch (e) {}
+      renderAll();
+    }
+    dbReady = true;
+    $("sync").textContent = "Saved to your account";
+  } catch (e) { $("sync").textContent = "Saved on this phone"; }
+}
+
+// ======================================================= blackjack game
+const BJ = {
+  get player() { return S.bj.hands[S.bj.active]; },
+  autoTarget() { if (S.bj.hands.length === 1 && S.bj.hands[0].length === 0) return "player"; if (!S.bj.dealer.length) return "dealer"; return "player"; },
+  target() { return S.bj.target || BJ.autoTarget(); },
+  advice() { const p = BJ.player; if (p.length < 2 || !S.bj.dealer.length) return null; return advise(p, S.bj.dealer[0], rules(), tcOrNull(), S.bj.hands.length < 4); },
+  decision(chosen) {
+    const a = BJ.advice(); if (!a || a.action === "Bust") return;
+    const p = BJ.player; const [t, soft] = handTotal(p); const up = bjValue(S.bj.dealer[0]);
+    const pair = p.length === 2 && bjValue(p[0]) === bjValue(p[1]) ? p[0] : null;
+    S.bj.decisions.push({ situation: situation(t, soft, pair, up), total: t, soft, up: up === 11 ? 1 : up, cards: p.length,
+      hand: S.bj.active, advised: a.action, chosen, deviation: !!a.deviation });
+  },
+  add(rank, target) {
+    target = target || BJ.target();
+    bjShoe.deal(rank);
+    if (target === "player") { if (BJ.player.length >= 2 && handTotal(BJ.player)[0] < 21) BJ.decision("Hit"); BJ.player.push(rank); }
+    else if (target === "dealer") S.bj.dealer.push(rank);
+    S.bj.shoe.push(rank); S.bj.log.push([target, S.bj.active]);
+  },
+  undo() {
+    const l = S.bj.log.pop(); if (!l) return; bjShoe.undo(); S.bj.shoe.pop();
+    if (l[0] === "player") { S.bj.hands[l[1]].pop(); const d = S.bj.decisions; if (d.length && d[d.length - 1].chosen === "Hit" && d[d.length - 1].hand === l[1]) d.pop(); }
+    else if (l[0] === "dealer") S.bj.dealer.pop();
+  },
+  canSplit() { const p = BJ.player; return p.length === 2 && bjValue(p[0]) === bjValue(p[1]) && S.bj.hands.length < 4; },
+  split() { if (!BJ.canSplit()) return; BJ.decision("Split"); const c = BJ.player.pop(); S.bj.hands.splice(S.bj.active + 1, 0, [c]); S.bj.log = []; S.bj.target = "player"; },
+  finish(doubled, bet) {
+    const g = S.bj;
+    if (!g.hands.some(h => h.length) && !g.dealer.length) return BJ.reset();
+    const dealerBJ = g.dealer.length === 2 && handTotal(g.dealer)[0] === 21;
+    if (!dealerBJ && g.dealer.length) g.hands.forEach((h, i) => {
+      if (h.length < 2) return;
+      const mine = g.decisions.filter(d => d.hand === i); const last = mine[mine.length - 1];
+      if (doubled && h.length === 3 && last && last.cards === 2 && last.chosen === "Hit") { last.chosen = "Double"; return; }
+      if (handTotal(h)[0] < 21) { const s = g.active; g.active = i; BJ.decision("Stand"); g.active = s; }
+    });
+    g.decisions.forEach(d => d.bet = bet);
+    S.history.decisions.push(...g.decisions);
+    S.history.bj.push({ dealer: g.dealer.slice(), live: S.settings.live });
+    BJ.reset();
+  },
+  reset() { Object.assign(S.bj, { hands: [[]], active: 0, dealer: [], log: [], decisions: [], target: null }); S.typed.bj = false; },
+};
+
+// ======================================================= rendering helpers
+function cardsInto(box, cards, min, active) {
+  box.replaceChildren();
+  cards.forEach(c => box.append(el("div", "card", c)));
+  for (let i = cards.length; i < min; i++) box.append(el("div", "card ghost" + (active ? " active" : "")));
+}
+function betAdvice(game) {
+  if (game === "bj") {
+    const tc = tcOrNull(); return recommend(S.plan, bankroll(), tc === null ? -0.005 : estEdge(tc), "blackjack");
+  }
+  const o = baccOdds(bacShoe, bacRules()); const side = o.best.toLowerCase();
+  return recommend(S.plan, bankroll(), o.bestEv, "baccarat", side === "player" ? "player" : "banker");
+}
+function renderBetCard(box, adv, prefix, onUse) {
+  box.replaceChildren();
+  if (adv.alert) {
+    box.append(el("div", "amt alert", adv.alert), el("div", "muted small", "Change the plan from the bankroll button at the bottom."));
+    return;
+  }
+  const mult = adv.multiple !== 1 ? `${+adv.multiple.toFixed(2)}x base` : "base bet";
+  const row = el("div", "row"); const amt = el("div", "amt", `${prefix} ${money(adv.amount)}`);
+  amt.append(el("span", "muted small", `  (${mult})`)); amt.style.flex = "1";
+  const use = el("button", "", "Use"); use.style.minWidth = "64px"; use.onclick = onUse;
+  row.append(amt, use);
+  box.append(row, el("div", "muted small", `${adv.reason} Goal chance ${Math.round(adv.pGoal * 100)}%.`));
+}
+
+// ======================================================= blackjack view
+function renderBJ() {
+  const live = S.settings.live; const g = S.bj;
+  $("bjCount").style.display = live ? "" : "none"; $("bjRng").style.display = live ? "none" : "";
+  if (live) {
+    $("rc").textContent = (bjShoe.rc > 0 ? "+" : "") + bjShoe.rc;
+    const tc = bjShoe.tc; $("tc").textContent = (tc > 0 ? "+" : "") + tc.toFixed(1);
+    $("tc").style.color = tc >= 2 ? "var(--win)" : tc <= -2 ? "var(--loss)" : "";
+    $("pen").textContent = Math.round(bjShoe.pen * 100) + "%";
+  }
+  const adv = BJ.advice(); const act = $("action");
+  if (bjError) { act.textContent = "Check that card"; act.style.color = "var(--loss)"; $("reason").textContent = bjError; $("flags").textContent = ""; }
+  else if (adv) {
+    act.textContent = adv.action;
+    act.style.color = { Hit: "var(--hit)", Stand: "var(--stand)", Double: "var(--double)", Split: "var(--split)", Surrender: "var(--surrender)", Bust: "var(--loss)" }[adv.action] || "";
+    $("reason").textContent = adv.reason;
+    const f = []; if (adv.deviation) f.push("Count play: differs from basic strategy");
+    if (adv.insurance) f.push("Take insurance"); else if (g.dealer[0] === "A") f.push("Decline insurance");
+    $("flags").textContent = f.join("  ·  ");
+  } else { act.textContent = "Waiting"; act.style.color = "var(--faint)"; $("reason").textContent = "Tap your two cards and the dealer's upcard."; $("flags").textContent = ""; }
+  const tgt = BJ.target();
+  cardsInto($("dealerCards"), g.dealer, 1, tgt === "dealer");
+  cardsInto($("playerCards"), BJ.player, 2, tgt === "player");
+  const tot = c => { if (!c.length) return ""; const [t, s] = handTotal(c); return (s && t <= 21 ? "soft " : "") + t; };
+  $("dealerTot").textContent = tot(g.dealer); $("playerTot").textContent = tot(BJ.player);
+  $("youLab").textContent = g.hands.length > 1 ? `You ${g.active + 1}/${g.hands.length}` : "You";
+  [...$("target").children].forEach(b => b.classList.toggle("on", b.dataset.t === tgt));
+  $("bjSplit").disabled = !BJ.canSplit();
+  $("bjNext").textContent = g.active + 1 < g.hands.length ? "Next hand" : "New hand";
+  const ba = betAdvice("bj");
+  renderBetCard($("bjBetCard"), ba, "Next bet", () => { S.bets.bj = ba.amount; S.typed.bj = true; renderBJ(); save(); });
+  if (S.autofill && !ba.alert && !S.typed.bj && !g.hands.some(h => h.length) && !g.dealer.length) S.bets.bj = ba.amount;
+  if (document.activeElement !== $("bjBet")) $("bjBet").value = S.bets.bj.toFixed(2);
+  const res = $("bjResults"); res.replaceChildren(); res.classList.toggle("five", S.settings.surrender);
+  const opts = [["Win", "win", "c-win"], ["Loss", "loss", "c-loss"], ["Push", "push", ""], ["BJ", "blackjack", "c-win"]];
+  if (S.settings.surrender) opts.push(["Surr.", "surrender", "c-loss"]);
+  opts.forEach(([lab, key, cls]) => { const b = el("button", cls, lab); b.onclick = () => recordBJ(key); res.append(b); });
+}
+function recordBJ(key) {
+  const bet = S.bets.bj * ($("bjDoubled").checked ? 2 : 1);
+  S.session.push(["blackjack", bet, Math.round(bet * RESULT_MULT[key] * 100) / 100, Date.now()]);
+  if (S.bj.active + 1 < S.bj.hands.length) S.bj.active++;
+  else BJ.finish($("bjDoubled").checked, S.bets.bj);
+  $("bjDoubled").checked = false; bjError = "";
+  save(); renderAll();
+}
+
+// ======================================================= baccarat view
+function renderBac() {
+  const live = S.settings.live; const g = S.bac;
+  $("bacShoe").style.display = live ? "" : "none"; $("bacRng").style.display = live ? "none" : "";
+  $("bacEntry").style.display = live ? "" : "none";
+  if (live) { $("bacLeft").textContent = bacShoe.left; $("bacPen").textContent = Math.round(bacShoe.pen * 100) + "%";
+    $("bacCoup").textContent = `${g.hands.player.join(" ") || "-"} | ${g.hands.banker.join(" ") || "-"}`; }
+  let o;
+  try { o = baccOdds(bacShoe, bacRules()); bacError = bacError.startsWith("Not enough") ? "" : bacError; }
+  catch (e) { $("bars").replaceChildren(); $("bacVerdict").textContent = e.message; $("bacVerdict").className = "verdict err"; return; }
+  const bars = $("bars"); bars.replaceChildren();
+  [["Player", o.player, o.evPlayer, "var(--player)"], ["Banker", o.banker, o.evBanker, "var(--banker)"], ["Tie", o.tie, o.evTie, "var(--tie)"]].forEach(([n, p, ev, col]) => {
+    const best = o.best === n; const b = el("div", "bar"); const top = el("div", "top");
+    const left = el("span"); const name = el("span", "name", n); if (!best) name.style.fontWeight = "400";
+    left.append(name, el("span", "ev" + (ev > 0 ? " pos" : ""), `EV ${pct(ev, true)}${best ? "   best bet" : ""}`));
+    top.append(left, el("span", "pct", (p * 100).toFixed(2) + "%"));
+    const tr = el("div", "track"); const f = el("div", "fill"); f.style.width = Math.min(p / 0.5, 1) * 100 + "%"; f.style.background = col; f.style.opacity = best ? 1 : 0.6;
+    tr.append(f); b.append(top, tr); bars.append(b);
+  });
+  $("bacVerdict").textContent = bacError || baccSuggestion(o);
+  $("bacVerdict").className = "verdict " + (bacError ? "err" : o.bestEv > 0 ? "c-win" : "muted");
+  [...$("bacSide").children].forEach(b => b.classList.toggle("on", b.dataset.s === g.entrySide));
+  const side = o.best.toLowerCase();
+  const ba = betAdvice("bac");
+  renderBetCard($("bacBetCard"), ba, `Bet ${o.best}`, () => { S.bets.bac = ba.amount; S.typed.bac = true; g.betSide = side; renderBac(); save(); });
+  if (S.autofill && !ba.alert && !S.typed.bac && !g.hands.player.length && !g.hands.banker.length) { S.bets.bac = ba.amount; g.betSide = side; }
+  if (document.activeElement !== $("bacBet")) $("bacBet").value = S.bets.bac.toFixed(2);
+  [...$("bacBetSide").children].forEach(b => b.classList.toggle("on", b.dataset.s === g.betSide));
+}
+function recordBac(winner) {
+  const g = S.bac, bet = S.bets.bac, side = g.betSide;
+  const btot = g.hands.banker.reduce((s, c) => s + baccValue(c), 0) % 10;
+  let net;
+  if (side === winner) net = side === "player" ? bet : side === "banker" ? (S.settings.noComm ? (btot === 6 ? bet / 2 : bet) : bet * (1 - S.settings.commission)) : bet * S.settings.tiePays;
+  else net = winner === "tie" && side !== "tie" ? 0 : -bet;
+  S.session.push(["baccarat", bet, Math.round(net * 100) / 100, Date.now()]);
+  S.history.bac.push({ winner, banker6: winner === "banker" && btot === 6 && g.hands.banker.length > 0, live: S.settings.live });
+  g.hands = { player: [], banker: [] }; g.log = []; g.entrySide = "player"; S.typed.bac = false; bacError = "";
+  save(); renderAll();
+}
+
+// Deal order: Player, Banker, Player, Banker, then third cards by the rules.
+function nextBacSide(h) {
+  const p = h.player, b = h.banker;
+  if (p.length < 2 || b.length < 2) return p.length <= b.length ? "player" : "banker";
+  const tot = x => x.reduce((s, c) => s + baccValue(c), 0) % 10;
+  if (tot(p.slice(0, 2)) >= 8 || tot(b.slice(0, 2)) >= 8) return "player";
+  if (p.length === 2 && tot(p) <= 5) return "player";
+  return "banker";
+}
+
+// ======================================================= stats view
+function renderStats() {
+  const rs = S.session; const p = profit();
+  $("sProfit").textContent = (p > 0 ? "+" : "") + money(p); $("sProfit").style.color = p > 0 ? "var(--win)" : p < 0 ? "var(--loss)" : "";
+  const wins = rs.filter(r => r[2] > 0).length, losses = rs.filter(r => r[2] < 0).length, pushes = rs.length - wins - losses;
+  const wag = rs.reduce((s, r) => s + r[1], 0);
+  let run = 0, peak = 0, dd = 0; const pts = [0];
+  rs.forEach(r => { run += r[2]; pts.push(run); peak = Math.max(peak, run); dd = Math.max(dd, peak - run); });
+  const bw = Math.max(0, ...rs.map(r => r[2])), bl = Math.min(0, ...rs.map(r => r[2]));
+  const g = $("sGrid"); g.replaceChildren();
+  [["Wagered", money(wag)], ["Rounds", rs.length], ["Wins", wins, "c-win"], ["Losses", losses, "c-loss"], ["Pushes", pushes],
+   ["Win rate", wins + losses ? Math.round(100 * wins / (wins + losses)) + "%" : "0%"], ["Biggest win", (bw > 0 ? "+" : "") + money(bw)],
+   ["Biggest loss", money(bl)], ["Max drawdown", money(dd)], ["Return on wagered", wag ? pct(p / wag, true) : "0.00%"]].forEach(([l, v, c]) => {
+    const cell = el("div", "cell"); cell.append(el("div", "lab", l), el("div", "val " + (c && v ? c : ""), String(v))); g.append(cell);
+  });
+  const svg = $("chart"); svg.replaceChildren();
+  const NS = "http://www.w3.org/2000/svg";
+  let lo = Math.min(0, ...pts), hi = Math.max(0, ...pts); if (hi - lo < 1e-9) { hi += 1; lo -= 1; }
+  const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
+  const y = v => 125 - (v - lo) / (hi - lo) * 120; const x = i => pts.length > 1 ? i / (pts.length - 1) * 300 : 0;
+  const zero = document.createElementNS(NS, "line");
+  Object.entries({ x1: 0, x2: 300, y1: y(0), y2: y(0), stroke: "#2b2b2b", "stroke-dasharray": "4 4", "vector-effect": "non-scaling-stroke" }).forEach(([k, v]) => zero.setAttribute(k, v));
+  svg.append(zero);
+  if (pts.length > 1) {
+    const path = document.createElementNS(NS, "path");
+    path.setAttribute("d", pts.map((v, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" "));
+    path.setAttribute("fill", "none"); path.setAttribute("stroke-width", "2"); path.setAttribute("vector-effect", "non-scaling-stroke");
+    path.setAttribute("stroke", p > 0 ? "#3dbb78" : p < 0 ? "#e5484d" : "#f2ede4"); svg.append(path);
+  }
+}
+
+// ======================================================= coach view
+function renderCoach() {
+  const c = $("v-coach"); c.replaceChildren();
+  const h = t => c.append(el("h3", "", t)); const p = (t, cls) => c.append(el("p", cls || "", t));
+  const br = bankroll(), pl = S.plan;
+  h("Your goal");
+  if (br >= pl.goal) p(`Bankroll ${money(br)}: goal of ${money(pl.goal, 0)} reached.`, "c-win");
+  else if (br <= pl.stop) p(`Bankroll ${money(br)}: at your stop.`, "c-loss");
+  else {
+    p(`Bankroll ${money(br)}, goal ${money(pl.goal, 0)}, stop ${money(pl.stop, 0)}.`);
+    const flat = pReachFlat(br, pl.goal, pl.stop, pl.base, -0.0106, "baccarat"), bold = pReachBold(br, pl.goal, pl.stop, "baccarat", "banker", null, 2000);
+    p(`Chance of reaching the goal first (Banker bets): steady ${Math.round(flat * 100)}%, aggressive ${Math.round(bold * 100)}%. You're on ${pl.profile}.`, "muted small");
+  }
+  const hb = habits(S.history.decisions, S.settings.h17);
+  h("Your blackjack decisions");
+  if (!hb.n) p("Nothing yet. Tap in some hands and your habits show up here.", "muted small");
+  else {
+    p(`You followed the advice on ${Math.round(hb.rate * 100)}% of ${hb.n} decisions. Going your own way cost about ${money(hb.cost)} in expected value.`);
+    if (hb.top.length) p("Costliest habits:", "muted small");
+    hb.top.forEach(g => p(`${g.situation}: you ${g.chosen.toLowerCase()}, best is ${g.advised.toLowerCase()} (${g.count}x, ${money(g.cost)})`, "habit"));
+  }
+  h("How this table plays");
+  const s17 = soft17(S.history.bj);
+  if (!s17.verdict) p(`Watching for the dealer's soft 17 rule (seen ${s17.hits + s17.stands} of 3 needed).`, "muted small");
+  else {
+    const hits = s17.verdict === "hits"; p(`Dealer ${s17.verdict} on soft 17 (hit ${s17.hits}x, stood ${s17.stands}x).`);
+    if (hits !== S.settings.h17) { p("Your settings say the opposite.", "habit");
+      const b = el("button", "", `Switch to: dealer ${hits ? "hits" : "stands"} on soft 17`); b.style.width = "100%";
+      b.onclick = () => { S.settings.h17 = hits; save(); renderAll(); }; c.append(b); }
+  }
+  h("Fair game check");
+  const fair = fairness(S.history.bac, S.history.bj);
+  if (!fair.length) p("Needs 20+ rounds of a game to compare results with the math.", "muted small");
+  fair.forEach(f => p(`${f.what}: ${(f.seen * 100).toFixed(1)}% seen vs ${(f.expected * 100).toFixed(1)}% expected over ${f.n}: ${f.verdict}.`, f.verdict === "normal" ? "muted" : "habit"));
+  h("Streak systems on your baccarat history");
+  const best = baccOdds(bacShoe, bacRules()).best.toLowerCase() === "player" ? "player" : "banker";
+  const rows = backtest(S.history.bac, best, S.settings.noComm);
+  if (!rows.length) p("Logged baccarat coups show up here.", "muted small");
+  rows.forEach(r => p(`${r.name}: ${r.net >= 0 ? "+" : ""}${r.net.toFixed(1)} units over ${r.bets} bets (${r.per100 >= 0 ? "+" : ""}${r.per100.toFixed(1)} per 100)`));
+  if (rows.length) p("Short runs swing a lot either way. Over many coups each system ends up near the house edge; following the better side loses least.", "muted small");
+  const clr = el("button", "", "Clear learned history"); clr.style.width = "100%"; clr.style.marginTop = "18px";
+  clr.onclick = () => { if (confirm("Forget all learned decisions and rounds?")) { S.history = { decisions: [], bj: [], bac: [] }; save(); renderCoach(); } };
+  c.append(clr);
+}
+
+// ======================================================= frame
+let tab = "bj";
+function renderAll() {
+  $("modePill").textContent = S.settings.live ? `Live dealer, ${S.settings.decks} decks` : "RNG mode";
+  if (tab === "bj") renderBJ(); else if (tab === "bac") renderBac(); else if (tab === "stats") renderStats(); else renderCoach();
+  const p = profit(); $("fProfit").textContent = "Profit " + (p > 0 ? "+" : "") + money(p);
+  $("fProfit").style.color = p > 0 ? "var(--win)" : p < 0 ? "var(--loss)" : "";
+  $("bankBtn").textContent = `Bankroll ${money(bankroll())} / ${money(S.plan.goal, 0)}`;
+}
+function showTab(t) {
+  tab = t; ["bj", "bac", "stats", "coach"].forEach(k => $("v-" + k).classList.toggle("show", k === t));
+  [...$("tabs").children].forEach(b => b.classList.toggle("on", b.dataset.tab === t));
+  renderAll(); window.scrollTo(0, 0);
+}
+
+// ======================================================= sheets
+let planProfile = "steady";
+function openPlan(first) {
+  const pl = S.plan;
+  const cont = $("planContinue");
+  if (S.planSet) { cont.style.display = ""; $("planOr").style.display = "";
+    cont.replaceChildren(el("div", "t", `Continue: bankroll ${money(bankroll())}, goal ${money(pl.goal, 0)}`), el("div", "d", `${pl.profile[0].toUpperCase() + pl.profile.slice(1)}, base bet ${money(pl.base)}`)); }
+  else { cont.style.display = "none"; $("planOr").style.display = "none"; }
+  $("pBank").value = (S.planSet ? bankroll() : pl.bankroll).toFixed(2); $("pBase").value = pl.base.toFixed(2);
+  $("pGoal").value = pl.goal.toFixed(2); $("pStop").value = pl.stop.toFixed(2); $("pMin").value = pl.min.toFixed(2); $("pMax").value = pl.max.toFixed(2);
+  planProfile = pl.profile; $("pAuto").checked = S.autofill; syncPlanChoice(); planOdds();
+  $("planSheet").classList.add("show");
+}
+function syncPlanChoice() { document.querySelectorAll("#planSheet [data-profile]").forEach(b => b.classList.toggle("on", b.dataset.profile === planProfile)); }
+function planOdds() {
+  const br = num($("pBank").value), goal = num($("pGoal").value), stop = num($("pStop").value), base = Math.max(num($("pBase").value), 0.01);
+  if (goal <= br || br <= stop) { $("planOdds").textContent = ""; return; }
+  const flat = pReachFlat(br, goal, stop, base, -0.0106, "baccarat"), bold = pReachBold(br, goal, stop, "baccarat", "banker", null, 2000);
+  $("planOdds").textContent = `Chance of reaching ${money(goal, 0)} before ${money(stop, 0)} (baccarat, Banker): steady ${Math.round(flat * 100)}%, aggressive ${Math.round(bold * 100)}%.`;
+}
+function closeSheets() { document.querySelectorAll(".sheet-wrap").forEach(s => s.classList.remove("show")); }
+let setLive = false;
+function openSettings() {
+  const s = S.settings; setLive = s.live; syncLive();
+  $("sDecks").value = s.decks; $("sTie").value = s.tiePays; $("sComm").value = (s.commission * 100).toFixed(1);
+  $("sH17").checked = s.h17; $("sDas").checked = s.das; $("sSur").checked = s.surrender; $("sNoComm").checked = s.noComm;
+  $("setNote").textContent = ""; $("setSheet").classList.add("show");
+}
+function syncLive() { document.querySelectorAll("#setSheet [data-live]").forEach(b => b.classList.toggle("on", (b.dataset.live === "1") === setLive)); $("sDecks").disabled = !setLive; }
+
+// ======================================================= wiring
+function wire() {
+  $("tabs").onclick = e => { const t = e.target.closest("button"); if (t) showTab(t.dataset.tab); };
+  const mkKeys = (box, fn) => KEYS.forEach(k => { const b = el("button", "", k); if (k === "10") b.title = "10, J, Q or K"; b.onclick = () => fn(k); box.append(b); });
+  mkKeys($("bjKeys"), k => { try { BJ.add(k); bjError = ""; } catch (e) { bjError = e.message; } save(); renderBJ(); });
+  mkKeys($("bacKeys"), k => {
+    try { bacShoe.deal(k); S.bac.shoe.push(k); S.bac.hands[S.bac.entrySide].push(k); S.bac.log.push(S.bac.entrySide); bacError = "";
+      S.bac.entrySide = nextBacSide(S.bac.hands); }
+    catch (e) { bacError = e.message; }
+    save(); renderBac(); });
+  $("target").onclick = e => { const b = e.target.closest("button"); if (b) { S.bj.target = b.dataset.t; renderBJ(); } };
+  $("bjUndo").onclick = () => { BJ.undo(); bjError = ""; save(); renderBJ(); };
+  $("bjSplit").onclick = () => { BJ.split(); save(); renderBJ(); };
+  $("bjNext").onclick = () => { if (S.bj.active + 1 < S.bj.hands.length) S.bj.active++; else BJ.finish($("bjDoubled").checked, S.bets.bj); $("bjDoubled").checked = false; save(); renderBJ(); };
+  $("bjShuffle").onclick = () => { if (confirm("Start a fresh blackjack shoe? Session stats are kept.")) { S.bj.shoe = []; BJ.reset(); rebuildShoes(); save(); renderBJ(); } };
+  $("bjBet").oninput = e => { S.bets.bj = num(e.target.value); S.typed.bj = true; };
+  $("bjBet").onblur = () => { save(); renderBJ(); };
+  $("bacBet").oninput = e => { S.bets.bac = num(e.target.value); S.typed.bac = true; };
+  $("bacBet").onblur = () => { save(); renderBac(); };
+  $("bacSide").onclick = e => { const b = e.target.closest("button"); if (b) { S.bac.entrySide = b.dataset.s; renderBac(); } };
+  $("bacBetSide").onclick = e => { const b = e.target.closest("button"); if (b) { S.bac.betSide = b.dataset.s; S.typed.bac = true; renderBac(); save(); } };
+  document.querySelectorAll("[data-w]").forEach(b => b.onclick = () => recordBac(b.dataset.w));
+  $("bacUndo").onclick = () => { const side = S.bac.log.pop(); if (side) { bacShoe.undo(); S.bac.shoe.pop(); S.bac.hands[side].pop(); S.bac.entrySide = nextBacSide(S.bac.hands); } bacError = ""; save(); renderBac(); };
+  $("bacShuffle").onclick = () => { if (confirm("Start a fresh baccarat shoe? Session stats are kept.")) { S.bac.shoe = []; S.bac.hands = { player: [], banker: [] }; S.bac.log = []; rebuildShoes(); save(); renderBac(); } };
+  $("sUndo").onclick = () => { S.session.pop(); save(); renderAll(); };
+  $("sReset").onclick = () => { if (confirm("Clear all rounds from this session?")) { S.plan.startProfit = 0; S.plan.bankroll = bankroll(); S.session = []; save(); renderAll(); } };
+  $("bankBtn").onclick = () => openPlan(false);
+  $("gear").onclick = openSettings;
+  document.querySelectorAll("#planSheet [data-profile]").forEach(b => b.onclick = () => { planProfile = b.dataset.profile; syncPlanChoice(); });
+  ["pBank", "pGoal", "pStop", "pBase"].forEach(id => $(id).addEventListener("input", planOdds));
+  $("planContinue").onclick = () => { S.autofill = $("pAuto").checked; closeSheets(); save(); renderAll(); };
+  $("planStart").onclick = () => {
+    S.plan = { bankroll: num($("pBank").value), base: num($("pBase").value) || 1, goal: num($("pGoal").value), stop: num($("pStop").value),
+      min: num($("pMin").value) || 0.01, max: num($("pMax").value), profile: planProfile, startProfit: profit() };
+    S.autofill = $("pAuto").checked; S.planSet = true; S.typed = { bj: false, bac: false };
+    closeSheets(); save(); renderAll(); };
+  document.querySelectorAll("#setSheet [data-live]").forEach(b => b.onclick = () => { setLive = b.dataset.live === "1"; syncLive(); });
+  $("setCancel").onclick = closeSheets;
+  $("setSave").onclick = () => {
+    const s = S.settings; const decks = Math.min(8, Math.max(1, parseInt($("sDecks").value) || 8));
+    const shoeChanged = setLive !== s.live || decks !== s.decks;
+    if (shoeChanged && (S.bj.shoe.length || S.bac.shoe.length) && !confirm("Changing the mode or deck count starts a fresh shoe. Session stats are kept.")) return;
+    Object.assign(s, { live: setLive, decks, tiePays: num($("sTie").value) || 8, commission: num($("sComm").value) / 100,
+      h17: $("sH17").checked, das: $("sDas").checked, surrender: $("sSur").checked, noComm: $("sNoComm").checked });
+    if (shoeChanged) { S.bj.shoe = []; S.bac.shoe = []; BJ.reset(); S.bac.hands = { player: [], banker: [] }; S.bac.log = []; }
+    rebuildShoes(); closeSheets(); save(); renderAll(); };
+}
+
+// ======================================================= start
+loadLocal();
+rebuildShoes();
+wire();
+showTab("bj");
+openPlan(true);
+connectDb();
+</script>
+</body>
+</html>
